@@ -4,7 +4,7 @@ class Message extends React.Component {
 	render() {
 		return (
 			<p className="user-message">
-				{this.props.pseudo}: Message
+				<strong>{this.props.details.pseudo}</strong>: {this.props.details.message}
 			</p>
 		)
 	}

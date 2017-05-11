@@ -4,26 +4,26 @@ class Formulaire extends React.Component {
 
 	state = {
 		length: this.props.length
-	};
+	}
 
 	createMessage = event => {
 		event.preventDefault();
 		const message = {
 			message: this.message.value,
 			pseudo: this.props.pseudo
-		};
+		}
 
 		this.props.addMessage(message);
 
 		this.messageForm.reset();
 		const length = this.props.length;
 		this.setState({ length });
-	};
+	}
 
 	compteur = event => {
 		const length = this.props.length - this.message.value.length;
 		this.setState({ length });
-	};
+	}
 
 	render() {
 		return (
