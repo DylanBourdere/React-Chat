@@ -1,0 +1,22 @@
+.message-enter {
+	opacity: 0;
+	transform: translateY(100%);
+	transition: all 0.2s;
+}
+
+.message-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.message-leave {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.2s;
+}
+
+.message-leave {
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: all 0.2s;
+}
