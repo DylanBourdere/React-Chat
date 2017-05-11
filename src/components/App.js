@@ -1,11 +1,19 @@
 import React from 'react';
 import Formulaire from './Formulaire';
 import Message from './Message';
+import base from '../base';
 
 class App extends React.Component {
 
 	state = {
 		messages: {}
+	}
+
+	componentWillMount() {
+		this.ref = base.syncState('/', {
+			context: this,
+			state: 'messages'
+		});
 	}
 
 	addMessage = (message) => {
@@ -25,7 +33,10 @@ class App extends React.Component {
 				<div className="messages">
 					<Message pseudo={this.props.params.pseudo}/>
 				</div>
-				<Formulaire addMessage={this.addMessage} />
+				<Formulaire addMessage={this.addMessage}
+							pseudo={this.props.params.pseudo}
+							length="140"
+							/>
 				</div>
 			</div>
 		)
