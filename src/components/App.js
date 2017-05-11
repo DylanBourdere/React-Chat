@@ -22,6 +22,8 @@ class App extends React.Component {
 		// On ajoute le message avec une clé timestamp
 		const timestamp = Date.now();
 		messages[`message-${timestamp}`] = message;
+
+		Object.keys(messages).slice(0, -10).map(key => messages[key] = null);
 		// MAJ du state
 		this.setState({ messages });
 	}
