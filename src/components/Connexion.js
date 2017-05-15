@@ -13,6 +13,7 @@ class Connexion extends React.Component {
 			<div className="connexionBox" onSubmit={(e) => this.goToChat(e)} >
 			<form className="connexion">
 				<input type="text" placeholder="Pseudo" required ref={(input) => {this.pseudoInput = input}} />
+				<input type="text" placeholder="Server" required />
 				<button type="submit">Go</button>
 			</form>
 			</div>
